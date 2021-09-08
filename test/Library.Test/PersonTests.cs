@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 using UnitTestAndDebug;
 
-namespace Tests
+namespace UnitTestAndDebug
 {
     public class Tests
     {
@@ -14,8 +14,37 @@ namespace Tests
 
         [Test]
         public void Test1() // Cambiá el nombre para indicar qué estás probando
-        {
-            // Insertá tu código  de pruebaaquí
+        {            
+            string nameExpected = "";
+            string idExpected = "52905179-9";
+            
+            Person personaPrueba = new Person("Prueba", "5.290.517-9");
+            Assert.AreEqual(personaPrueba.Name, nameExpected);
+            Assert.AreEqual(personaPrueba.ID, idExpected);
+        }
+
+        [Test]
+        public void Test2() // Cambiá el nombre para indicar qué estás probando
+        {            
+            const string nameExpected = "Prueba2";
+            const string idExpected = "529.051.799";
+            
+            Person personaPrueba = new Person(nameExpected, idExpected);
+
+            Assert.AreEqual(personaPrueba.Name, nameExpected);
+            Assert.AreEqual(personaPrueba.ID, idExpected);
+        }
+
+        [Test]
+        public void Test3() // Cambiá el nombre para indicar qué estás probando
+        {            
+            const string nameExpected = "Prueba3";
+            const string idExpected = "";
+            
+            Person personaPrueba = new Person(nameExpected, idExpected);
+
+            Assert.AreEqual(personaPrueba.Name, nameExpected);
+            Assert.AreEqual(personaPrueba.ID, idExpected);
         }
     }
 }

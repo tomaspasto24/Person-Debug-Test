@@ -11,7 +11,7 @@ namespace UnitTestAndDebug
         }
 
         private string name;
-
+ 
         private string id;
 
         public string Name
