@@ -15,36 +15,36 @@ namespace UnitTestAndDebug
         [Test]
         public void Test1() // Cambiá el nombre para indicar qué estás probando
         {            
-            string nameExpected = "";
-            string idExpected = "52905179-9";
+            string nameTest = "";
+            string idTest = "5290517-9";
             
-            Person personaPrueba = new Person("Prueba", "5.290.517-9");
-            Assert.AreEqual(personaPrueba.Name, nameExpected);
-            Assert.AreEqual(personaPrueba.ID, idExpected);
+            Person personaPrueba = new Person(nameTest, idTest);
+            Assert.AreEqual(personaPrueba.Name, null);
+            Assert.AreEqual(personaPrueba.Id, "5290517-9");
         }
 
         [Test]
         public void Test2() // Cambiá el nombre para indicar qué estás probando
         {            
-            const string nameExpected = "Prueba2";
-            const string idExpected = "529.051.799";
+            const string nameTest = "Prueba2";
+            const string idTest = "529.051.799";
             
-            Person personaPrueba = new Person(nameExpected, idExpected);
+            Person personaPrueba = new Person(nameTest, idTest);
 
-            Assert.AreEqual(personaPrueba.Name, nameExpected);
-            Assert.AreEqual(personaPrueba.ID, idExpected);
+            Assert.AreEqual(personaPrueba.Name, nameTest);
+            Assert.AreEqual(personaPrueba.Id, "");
         }
 
         [Test]
         public void Test3() // Cambiá el nombre para indicar qué estás probando
         {            
-            const string nameExpected = "Prueba3";
-            const string idExpected = "";
+            const string nameTest = "Prueba3";
+            const string idTest = "";
             
-            Person personaPrueba = new Person(nameExpected, idExpected);
+            Person personaPrueba = new Person(nameTest, idTest);
 
-            Assert.AreEqual(personaPrueba.Name, nameExpected);
-            Assert.AreEqual(personaPrueba.ID, idExpected);
+            Assert.AreEqual(personaPrueba.Name, nameTest);
+            Assert.AreEqual(personaPrueba.Id, "");
         }
     }
 }

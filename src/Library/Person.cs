@@ -7,7 +7,7 @@ namespace UnitTestAndDebug
         public Person(string name, string id)
         {
             this.Name = name;
-            this.ID = id;
+            this.Id = id;
         }
 
         private string name;
@@ -27,9 +27,14 @@ namespace UnitTestAndDebug
                 {
                     this.name = value;
                 }
+                else
+                {
+                    Console.WriteLine("Error con el nombre.");
+                    this.name = null; 
+                }
             }
         }
-        public string ID
+        public string Id
         {
             get
             {
@@ -42,12 +47,17 @@ namespace UnitTestAndDebug
                 {
                     this.id = value;
                 }
+                else
+                {
+                    Console.WriteLine("Error con el ID.");
+                    this.id = ""; 
+                }
             }
         }
 
         public void IntroduceYourself()
         {
-            Console.WriteLine($"Soy {this.Name} y mi cédula es {this.ID}");
+            Console.WriteLine($"Soy {this.Name} y mi cédula es {this.Id}");
         }
     }
 }
